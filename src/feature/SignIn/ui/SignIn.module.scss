@@ -1,0 +1,64 @@
+.signIn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 27.5rem;
+  height: 23.25rem;
+  background-color: white;
+  border-radius: 6px;
+}
+.logo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 3.25rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 6px solid #1677ff;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 9px;
+  }
+}
+
+.title {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 23.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 23.5rem;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+.form :global(.ant-input-prefix) {
+  color: gray;
+  height: 1.875rem;
+}
+
+.form :global(.ant-btn) {
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.form :global(.ant-form-item) {
+  margin-bottom: 1rem;
+}
