@@ -1,4 +1,4 @@
-import SignIn from "@/feature/SignIn/ui/SignIn";
+import SignIn from "@/feature/sign-in/ui/SignIn";
 
 function Authorization() {
   return <SignIn />;

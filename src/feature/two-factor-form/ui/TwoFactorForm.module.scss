@@ -1,0 +1,112 @@
+.form {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.verifyButton {
+  width: 100%;
+  height: 2.5rem;
+  max-width: 23.5rem;
+}
+
+.input {
+  width: 3.3rem;
+  height: 3.75rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.success {
+  border-color: lime !important;
+}
+
+:global(.ant-space) {
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.input {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+
+  &.success {
+    border-color: #52c41a;
+    background-color: #f6ffed;
+  }
+
+  &.error {
+    border-color: #ff4d4f;
+    background-color: #fff2f0;
+    animation: shake 0.5s ease-in-out;
+  }
+}
+
+.timer {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 14px;
+  font-weight: 500;
+
+  .warning {
+    color: #ff4d4f;
+    font-weight: bold;
+  }
+
+  .expired {
+    color: #ff4d4f;
+    font-weight: bold;
+  }
+
+  .successText {
+    color: #52c41a;
+    font-weight: bold;
+  }
+}
+
+.verifyButton {
+  margin-top: 8px;
+  min-width: 120px;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}

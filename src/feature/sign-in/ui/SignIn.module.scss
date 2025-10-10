@@ -5,9 +5,23 @@
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 27.5rem;
-  height: 23.25rem;
+  height: auto;
   background-color: white;
   border-radius: 6px;
+  .submitButton {
+    transition: all 0.3s ease;
+
+    &.error {
+      background-color: #ff4d4f;
+      border-color: #ff4d4f;
+      animation: shake 0.5s ease-in-out;
+
+      &:hover {
+        background-color: #ff7875;
+        border-color: #ff7875;
+      }
+    }
+  }
 }
 .logo {
   font-size: 1rem;
@@ -59,6 +73,38 @@
   font-size: 1rem;
 }
 
-.form :global(.ant-form-item) {
-  margin-bottom: 1rem;
+:global(.ant-form-item) {
+  margin-bottom: 1rem !important;
+
+  &:last-child {
+    margin-bottom: 2rem !important;
+  }
+}
+
+.helperText {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 22.5rem;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
 }
