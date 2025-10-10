@@ -2,6 +2,7 @@ import { Form, Space, Input, Button, message } from "antd";
 import { memo } from "react";
 import { useTwoFactorForm } from "../model/useTwoFactorForm";
 import st from "./TwoFactorForm.module.scss";
+import confetti from "canvas-confetti";
 
 interface TwoFactorFormProps {
   generatedCode: string | null;
@@ -30,7 +31,14 @@ export const TwoFactorForm = memo(
       if (res?.status === "invalid")
         message.error("Code expired or incomplete");
       if (res?.status === "error") message.error("Invalid code");
-      if (res?.status === "success") message.success("Verified");
+      if (res?.status === "success") {
+        message.success("Verified");
+        confetti({
+          particleCount: 150,
+          spread: 80,
+          origin: { y: 0.6 },
+        });
+      }
     };
 
     return (
@@ -92,8 +100,8 @@ export const TwoFactorForm = memo(
             <Button
               type="primary"
               style={{
-                backgroundColor: "lime",
-                borderColor: "black",
+                backgroundColor: "rgb(0, 183, 0)",
+                borderColor: "green",
                 color: "white",
               }}
               disabled
