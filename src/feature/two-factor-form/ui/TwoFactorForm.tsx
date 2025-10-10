@@ -91,7 +91,11 @@ export const TwoFactorForm = memo(
           {success && (
             <Button
               type="primary"
-              style={{ backgroundColor: "lime", borderColor: "green" }}
+              style={{
+                backgroundColor: "lime",
+                borderColor: "black",
+                color: "white",
+              }}
               disabled
               className={st.verifyButton}
             >
